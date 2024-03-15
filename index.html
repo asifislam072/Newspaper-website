@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome our news Portal update</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- DaisyI and tailwind link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- nav start -->
+    <nav>
+      <div class="lg:px-20 ">
+        <div class="navbar bg-base-100">
+          <div class="flex-1">
+            <h1 class="text-[#12132d] text-2xl font-bold madimi">
+              Update News
+            </h1>
+          </div>
+          <div class="flex-none">
+            <div class="dropdown dropdown-center">
+              <div class="flex justify-center items-center">
+                <div
+                  class="flex hidden lg:block justify-center items-center pr-7 cursor-pointer gap-5"
+                >
+                  <div class="tooltip tooltip-bottom" data-tip="Home">
+                    <button class="btn rounded-[30px] p-3">
+                      <img src="./images/home1.png" alt="" />
+                    </button>
+                  </div>
+
+                  <div class="tooltip tooltip-bottom " data-tip="Trem">
+                    <button class="btn rounded-[30px] p-3">
+                      <img src="./images/add.png" alt="" />
+                    </button>
+                  </div>
+
+                  <div class="tooltip tooltip-bottom" data-tip="Edite">
+                    <button class="btn rounded-[30px] p-3">
+                      <img src="./images/pen.png" alt="" />
+                    </button>
+                  </div>
+
+                  <div class="tooltip tooltip-bottom" data-tip="Option">
+                    <button class="btn rounded-[30px] p-3">
+                      <img src="./images/flag.png" alt="" />
+                    </button>
+                  </div>
+                </div>
+                <div>
+                  <button class="input-bttn-nav">Sing Up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- nav end -->
+
+    <!-- header start -->
+    <header class="lg:px-20">
+      <div class="main-header py-5">
+        <div class="lg:flex my-5 justify-between items-center lg:px-24">
+          <!-- serch section -->
+          <div class="lg:w-[60%] pl-4 ">
+            <h1 class=" mt-16 lg:text-5xl text-4xl text-white font-bold madimi lg:leading-[60px] lg:mt-16">
+              Welcome our news <br />Portal update
+            </h1>
+            <p class="text-white my-8">
+              The new portal also offers extranets that serve the VET community,
+              especially with the aim of exchanging best practices.
+            </p>
+            <div class="lg:w-96 mx-3 lg:pb-12">
+              <label class="input input-bordered flex items-center gap-2">
+                <input id="search-filed"
+                  type="text"
+                  class="grow rounded-2xl"
+                  placeholder="Search News Update"
+                />
+                <button onclick="searchHendel()" class="input-bttn">Search</button>
+              </label>
+            </div>
+          </div>
+
+          <!-- register user -->
+          <div class="mb-16 mx-7 lg:w-[300px]">
+            <div class="registe-user w-full leading-8 mb-3">
+              <div class="flex justify-between items-center pt-10 mx-8">
+                <h1>Total User</h1>
+                <h1>6.3k</h1>
+              </div>
+              <div class="flex justify-between items-center mx-8">
+                <h1>Forms</h1>
+                <h1>450</h1>
+              </div>
+              <div class="flex justify-between items-center mx-8">
+                <h1>Topic</h1>
+                <h1>4.3k</h1>
+              </div>
+              <div class="flex justify-between items-center mx-8">
+                <h1>Replays</h1>
+                <h1>4.7k</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main start -->
+    <main>
+      <!-- title section -->
+      <div class="flex-col text-center">
+        <h1 class="text-[#12132d] text-5xl font-extrabold madimi pt-12">
+          Update News
+        </h1>
+        <p class="text-gray-400 p-6">
+          Yes, you can run unit tests and view the results directly within the
+          app. The <br />
+          integrated testing features allow for a streamlined.
+        </p>
+      </div>
+
+      <!-- news section -->
+      <div class="lg:px-20">
+        <div id="togol-btn" class="justify-center flex hidden">
+          <span class="mx-[550px] loading loading-spinner text-success"></span>
+        </div>
+   
+        <div class="lg:flex  gap-16 mb-8 mx-4">
+          <!-- left site -->
+          <div id="all-post-setion" class="lg:w-[60%] lg:my-7">
+            <!-- <div class="flex gap-8 bg-[#f3f3f5] px-4 py-7 my-7 rounded-xl">
+              <div class="w-[30%]">
+                <img
+                  class="w-[70%] rounded-xl float-right"
+                  src="./images/man.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div class="pb-4">
+                  <div class="flex gap-9">
+                    <p class="font-medium">#Musice</p>
+                    <p class="font-medium">Athour:Alwun Hosun</p>
+                  </div>
+                  <h1 class="font-medium text-2xl madimi">
+                    Lorem ipsum dolor sit.
+                  </h1>
+                  <p class="text-gray-400">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Optio, perferendis! Illum, maxime.
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between border-t-2 border-dotted border-gray-400"
+                >
+                  <div class="flex gap-8 pt-4">
+                    <div class="lg:flex">
+                      <img src="./images/msg.png" />
+                      <p>456sg</p>
+                    </div>
+  
+                    <div class="lg:flex">
+                      <img src="./images/msg.png" />
+                      <p>456</p>
+                    </div>
+  
+                    <div class="lg:flex">
+                      <img src="./images/msg.png" />
+                      <p>456</p>
+                    </div>
+                  </div>
+                  <div class="pt-4">
+                    <button><img src="./images/pen.png" alt="" /></button>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="bg-[#f3f3f4] lg:w-[30%] w-[100%] h-[100%] rounded-xl mt-14">
+            <div id="read-post">
+              <div class="flex justify-between px-7 pt-7 items-center">
+                <h1 class="text-lg font-bold pb-5">Title</h1>
+                <p class="pb-5">Make a red <span id="incres-nbr" class="bg-green-500 rounded-md text-[15px] px-2">0</span></p>
+              </div>
+              <!-- <div id="read-post" class="flex justify-between px-7 pt-7 items-center">
+
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- join out form -->
+      <div class="lg:mx-20 bg-[#12132d] rounded-2xl mx-4">
+        <div class="lg:flex justify-around items-center px-10 pt-8">
+          <div class="leading-7">
+            <h1 class="text-white font-bold madimi text-4xl">Join Our Forum</h1>
+            <p class="text-gray-300 mt-3">
+              Share your favorite opinion and win and wp forum coffee mug! Yes,
+              you can <br />
+              run unit tests and view the results directly within the app.
+            </p>
+            <button class="bg-[#797dfc] my-5  text-white px-12 py-2 rounded-3xl">
+              Registered Now
+            </button>
+          </div>
+          <div>
+            <img class="" src="./images/joinforum.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- lates post -->
+      <div class="flex-col text-center">
+        <h1 class="text-[#12132d] text-5xl font-extrabold noto pt-12">
+          Trending news
+        </h1>
+        <p class="text-gray-400 p-6">
+          Yes, you can run unit tests and view the results directly within the
+          app. The <br />
+          integrated testing features allow for a streamlined .
+        </p>
+      </div>
+
+      <!-- last api funtion -->
+      <div  class="lg:px-20 mx-4">
+        <div id="letes-post" class="lg:flex justify-center items-center gap-6 ">
+          <!-- <div class="last-post p-7 rounded-2xl">
+            <img src="./images/man.jpg" alt="" />
+            <div class="flex gap-5 mt-2">
+              <img src="./images/calendar.png" alt="" />
+              <p>March 23 2023</p>
+            </div>
+            <h1 class="text-[#12132d] font-bold mt-3">
+              What will a mars habitat force that impact in our daily life!!!
+            </h1>
+            <p class="text-gray-500 mt-3">
+              Yes, you can run unit tests and view the results directly within
+              the app.
+            </p>
+            <div class="flex gap-4 mt-3">
+              <img class="w-[20%] rounded-full" src="./images/man.jpg" alt="" />
+              <div>
+                <h1>Cameron Williamson</h1>
+                <p>Athou</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </main>
+
+      <footer class="footer footer-center p-10 bg-[#f5f5f6] text-primary-content mt-8">
+        <aside>
+          <h1 class="text-black text-3xl font-semibold">Update Ticket</h1>
+          <p class="text-black ">Pull back the curtain on wars, mass atrocities, and other human rights abuses, and you’ll find grand <br> corruption and unchecked greed. </p>
+        </aside> 
+        <nav>
+          <div class="grid grid-flow-col gap-4">
+           <img src="./images/facebook.png" alt="">
+           <img src="./images/github.png" alt="">
+           <img src="./images/linkedin.png" alt="">
+          </div>
+        </nav>
+      </footer>
+
+      <script src="script.js"></script>
+  </body>
+</html>

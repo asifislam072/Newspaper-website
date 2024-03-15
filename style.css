@@ -1,0 +1,45 @@
+/* font */
+.madimi {
+    font-family: "Madimi One", sans-serif;
+    font-style: normal;
+  }
+  .noto{
+    font-family: "Noto Serif", serif;
+  }
+  
+  .main-header {
+    background-image: url(./images/bg.png);
+    background-color: #12132d;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-bttn-nav {
+    background-color: #797dfc;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: azure;
+  }
+  
+  .input-bttn {
+    background-color: #797dfc;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: azure;
+  }
+  .registe-user {
+    background-color: azure;
+    height: 200px;
+    width: 300px;
+    margin: 40px 0;
+    border-radius: 15px;
+  }
+  .last-post{
+    border: 2px solid #f3f3f4;
+  }
+  
